@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>TODO LIST</title>
+
+</head>
+<body ng-app="appName">
+
+
+<div id="container">
+    <h1>TO - DO LIST <i class="fa fa-pencil-square-o" aria-hidden="true"></i></h1>
+    <form ng-submit="submit()" ng-controller="someText">
+        <input type="text" id="submit" ng-model="text" placeholder="Do something!">
+        <ul ng-repeat='x in someNames track by $index'>
+            <li ng-class="{strike: deleted}"><span><i class="fa fa-trash" ng-click="removeText()"></i></span>
+                <span><input type="checkbox" ng-model="deleted"/></span>{{x}}
+
+            </li>
+        </ul>
+    </form>
+</div>
+</form>
+
+
+<script src="../node_modules/angular/angular.js"></script>
+<script src="app.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
